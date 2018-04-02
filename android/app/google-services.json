@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "155875894203",
+    "firebase_url": "https://todo-pwatest.firebaseio.com",
+    "project_id": "todo-pwatest",
+    "storage_bucket": "todo-pwatest.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:155875894203:android:090a592ce922d483",
+        "android_client_info": {
+          "package_name": "com.example.fluttertest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "155875894203-f4b4cbaj836qs2oe5r8q9gt244lhogm0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDgm6WhPp2M-WX0_z1ubIEtGkqVldtcI4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
