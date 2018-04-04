@@ -56,7 +56,11 @@ class _ListState extends State<ListWidget>{
         padding: const EdgeInsets.all(10.0),
         children : toDoList.map((ToDoItem todoitem){
           return new ListTile(
-            title : new Text(todoitem.lable));
+            title : new Text(todoitem.lable),
+            onTap: (){
+              _editToDo(todoitem);
+            },
+          );
         }).toList(),
        ),
         floatingActionButton: new FloatingActionButton(
@@ -67,7 +71,6 @@ class _ListState extends State<ListWidget>{
    }
 
    Future _addTodo() async{
-    //print('Add ToDo');
     ToDoItem newlyAddedItem = await Navigator.of(context).push(
           new MaterialPageRoute<ToDoItem>(
             builder: (BuildContext context){
@@ -78,4 +81,17 @@ class _ListState extends State<ListWidget>{
       reference.push().set(newlyAddedItem.toJson());
     }
   }
+
+  Future _editToDo(ToDoItem todoitem) async{
+    ToDoItem editedItem = await Navigator.of(context).push(
+          new MaterialPageRoute<ToDoItem>(
+            builder: (BuildContext context){
+              return new TodoAddWidget.add(todoitem);
+            })
+      );
+    if(editedItem != null){
+      reference.child(todoitem.key).set(editedItem.toJson());
+    }
+  }
+
 }

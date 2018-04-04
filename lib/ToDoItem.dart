@@ -5,10 +5,12 @@ class ToDoItem{
   String lable;
   String date;
   String description;
+  String key;
   ToDoItem(this.lable,this.date,this.description);
 
   ToDoItem.fromSnapShot(DataSnapshot snapShot)
-        :lable = snapShot.value["Label"],
+        :key = snapShot.key,
+        lable = snapShot.value["Label"],
         date = snapShot.value["Date"],
         description = snapShot.value["Description"];
 
