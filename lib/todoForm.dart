@@ -112,15 +112,11 @@ class _ListAddState extends State<TodoAddWidget>{
                         child: new Text('ok'),
                         onPressed: () {
                           Navigator.of(context).pop();
-                        },
-                      ), 
-                    ],
-                  )
-                );
+                        }), 
+                    ]));
               }
             }),
-          ]
-      ),
+          ]),
     );
   }
 
