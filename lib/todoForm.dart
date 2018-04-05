@@ -109,7 +109,7 @@ class _ListAddState extends State<TodoAddWidget>{
                     title : new Text("Please enter ToDo Lable"),
                     actions: <Widget>[
                       new FlatButton(
-                        child: new Text('ok'),
+                        child: new Text('Ok'),
                         onPressed: () {
                           Navigator.of(context).pop();
                         }), 
